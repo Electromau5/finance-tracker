@@ -22,4 +22,7 @@ def price
 	return "#{opening_price} (Opening)" if opening_price
 	'Unavailable'
 end
+	has_many :user_stocks
+
+	has_many :users, through: :user_stocks
 end
